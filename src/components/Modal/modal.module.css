@@ -1,0 +1,109 @@
+
+.modalContainer {
+    background: #080616;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+@media only screen and (min-width: 40em) {
+    .modalOverlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 1;
+        visibility: visible;
+        backface-visibility: hidden;
+        transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+   }
+}
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    background-color: var(--gray);
+    width: 600px;
+    max-width: 50em;
+    min-height: 40em;
+    padding: 1rem;
+    border-radius: 3px;
+    opacity: 1;
+    overflow-y: auto;
+    visibility: visible;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    transform: scale(1.2);
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.modal .modalContent {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    backface-visibility: visible;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0.3s;
+}
+.logo{
+    padding-bottom: 3em;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+.logoSpan1{
+    color: var(--black);
+    background-color: var(--main-color);
+    padding: 0.5em 1em;
+}
+.logoSpan2{
+    color: var(--white);
+    background-color: var(--black);
+    padding: 0.5em 1em;
+}
+.optionButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.option{
+    margin-bottom: 1em;
+    outline: none;
+    border: none;
+    padding: 1em 8em;
+    font-size: 1.2em;
+    font-weight: 700;
+    background-color: var(--white);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.option:active{
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: all ease-in-out 300ms;
+    transform: scale(.9);
+    box-shadow: 0 1px 6px -2px;
+}
+
+@media only screen and (max-width: 39.9375em) {
+    h1 {
+        font-size: 1.5rem;
+   }
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0;
+        transform: scale(1.1);
+        padding: 0 !important;
+   }
+}

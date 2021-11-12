@@ -1,0 +1,106 @@
+.InputContainer {
+    width: 100%;
+    margin-block-start: 0.2rem;
+    margin-block-end: 0.5rem;
+    margin-inline: auto;
+    font-size: 14px;
+    padding: 0.6em 0;
+  }
+  
+  .InputContainerError {
+    border-color: #ff0000 !important;
+  }
+  
+  .InputContainer:last-of-type {
+    margin-block-end: 0rem;
+  }
+  
+  /* input Label */
+  .InputLabel {
+    margin-block: 0.2em;
+    font-size: 1em;
+    color: var(--white);
+  }
+  
+  .InputLabelError {
+    color: #ff0000;
+  }
+  
+  /* Input wrapper */
+  .InputWrapper {
+    border: 1px solid #bebebe;
+    border-radius: 3px;
+    width: 100%;
+    height: 2.8em;
+    overflow: hidden;
+    margin: 0.2em 0;
+  }
+  
+  .InputWrapper:focus-within {
+    border: 2px solid var(--black);
+  }
+  
+
+  .InputWrapperWithPassword {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .InputElement {
+    width: 100%;
+    height: 100%;
+    color: black;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-indent: 0.8em;
+  }
+  
+  .InputElement::placeholder {
+    font-size: 0.9em;
+  }
+  
+  .InputElement:invalid,
+  .InputElement.is_invalid {
+    border-color: #ff0000;
+    color: var(--gray);
+  }
+  
+  .InputElement:focus,
+  .InputElement:focus-visible {
+    outline: none;
+  }
+  
+  /* password toggle */
+  .ToggleVisibility {
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .InputError {
+    color: #ff0000;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Media Query for Screen Width 1080px and Smaller */
+  @media only screen and (max-width: 1080px) {
+    .InputContainer {
+      margin-block: 0.5em;
+      width: 100%;
+    }
+  
+    .InputContainer:last-of-type {
+      margin-block-end: 0rem;
+    }
+  
+    .InputElement {
+      text-indent: 0.6em;
+    }
+  }
+  
+  
