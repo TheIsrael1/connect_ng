@@ -1,0 +1,7 @@
+.select{
+    background-color: var(--main-color);
+}
+
+.select option{
+    background-color: var(--white);
+}

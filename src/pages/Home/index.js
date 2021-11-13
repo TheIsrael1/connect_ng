@@ -1,4 +1,5 @@
 import React,  { useState, useEffect }  from 'react';
+import DefaultHeader from '../../components/DefaultHeader';
 import Signup from './signup';
 import Login from './Login'
 import styles from './home.module.css'
@@ -11,6 +12,8 @@ const Home = (
    const [toggled, setToggled] = useState(false);
 
     return (
+        <>
+        <DefaultHeader/>
         <div className={`${styles.container}`}>
             <div className={`${styles.wrapper}`} >
                 <div className={`${styles.row}`}>
@@ -38,6 +41,7 @@ const Home = (
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

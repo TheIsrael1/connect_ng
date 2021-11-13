@@ -1,8 +1,11 @@
 import React from 'react'
+import DefaultHeader from '../../components/DefaultHeader';
 import styles from './about.module.css'
 
 const About = () => {
     return (
+        <>
+        <DefaultHeader />
         <div className={`${styles.container}`}>
             <div className={`${styles.wrapper}`} >
                 <div className={`${styles.row}`}>
@@ -22,6 +25,7 @@ const About = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

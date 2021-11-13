@@ -11,7 +11,7 @@
  margin-right: auto;
  margin-left: auto;
  padding: 0 20px;
- justify-content: center;
+ /* justify-content: center; */
 }
 
 .row{
@@ -51,4 +51,15 @@
     padding: 1em 2em;
     font-size: 1em;
     font-weight: 700;
+}
+
+.imgWrap{
+    max-width: 555px;
+    height: 100%; 
+}
+.img{
+    width:100%;
+    height: 100%;
+    margin: 0 0 10px 0;
+    padding-right: 0;
 }
