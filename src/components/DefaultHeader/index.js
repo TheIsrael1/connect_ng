@@ -1,5 +1,6 @@
 import style from "./defaultHeader.module.css";
 import logo from "../../assets/image/logo.png";
+import { Link } from "react-router-dom";
 
 export default function DefaultHeader() {
   return (
@@ -12,9 +13,9 @@ export default function DefaultHeader() {
       </div>
       <nav>
         <ul className={`flex justify-between items-center gap-6`}>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact Us</li>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/">Contact Us</Link>
         </ul>
         <div className={style.thumbnail}>
           <img src='' alt='' />

@@ -1,8 +1,11 @@
 import React from 'react'
 import styles from './sellerDashboard.module.css'
 import DashboardHeader from '../../components/DashboardHeader'
+import { Link } from 'react-router-dom'
 
 const SellerDashboard = () => {
+
+    const name = localStorage.getItem("first_name")
     return (
         <>
         <DashboardHeader />
@@ -11,14 +14,14 @@ const SellerDashboard = () => {
                 <div className={`${styles.row}`}>
                     <div className={`${styles.column}`}>
                     <div className={`${styles.header}`}>
-                    Hi Israel,
+                    Hi {name},
                     </div>
                     <div className={`${styles.subText}`}>
                     Trying to Sell a Service?
                     </div>
-                    <a href="/" className={`${styles.btn}`}>
+                    <Link to="/listingflow" className={`${styles.btn}`}>
                     LIST A SERVICE
-                    </a>
+                    </Link>
                     </div>
                     <div className={`${styles.column}`}>
                     <div className={`${styles.imgWrap}`}>

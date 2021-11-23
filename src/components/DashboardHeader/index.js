@@ -1,5 +1,6 @@
 import style from "./dashboardheader.module.css";
 import logo from "../../assets/image/logo.png";
+import { Link } from "react-router-dom";
 
 export default function DashboardHeader() {
   return (
@@ -12,9 +13,9 @@ export default function DashboardHeader() {
       </div>
       <nav>
         <ul className={`flex justify-between items-center gap-6`}>
-          <li>Dashboard</li>
-          <li>Listings</li>
-          <li>Bookings</li>
+          <li><Link to="/sellerdashboard">Dashboard</Link></li>
+          <li><Link to="/sellerlistings">Listings</Link></li>
+          <li><Link to="/sellerbookings">Bookings</Link></li>
         </ul>
         <div className={style.thumbnail}>
           <img src='' alt='' />

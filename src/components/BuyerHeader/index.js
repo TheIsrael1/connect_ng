@@ -1,5 +1,6 @@
 import style from "./buyerHeader.module.css";
 import logo from "../../assets/image/logo.png";
+import { Link } from "react-router-dom";
 
 export default function BuyerHeader() {
   return (
@@ -8,12 +9,12 @@ export default function BuyerHeader() {
     >
       <div className={`flex items-center gap-2`}>
         <img src={logo} alt='' />
-        <h2 className={`font-bold text-xl`}>Seller</h2>
+        <h2 className={`font-bold text-xl`}>Buyer</h2>
       </div>
       <nav>
         <ul className={`flex justify-between items-center gap-6`}>
-          <li>MarketPlace</li>
-          <li>Bookings</li>
+          <li><Link to="/market">MarketPlace</Link></li>
+          <li><Link to="/buyerbookings">Bookings</Link></li>
         </ul>
         <div className={style.thumbnail}>
           <img src='' alt='' />

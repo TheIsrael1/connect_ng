@@ -109,5 +109,5 @@
   }
   
   .btnContainer .btn:disabled {
-    background: var(--main-color);
+    background: var(--main-color-disabled);
   }

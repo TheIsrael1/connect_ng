@@ -2,19 +2,55 @@ import React, {useState} from 'react'
 import Input from '../../components/Input'
 import Form from '../../components/Form'
 import styles from './home.module.css'
+import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = ({
     toggled,
-    toggle
+    toggle,
+    showDialog,
+    showLoader
 }) => {
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
+    const notify = (message) => toast.error(message)
 
     const handleSubmit = (e) =>{
         e.preventDefault()
+
+        axios
+        .post('http://connect-ng.herokuapp.com/api/auth/login', {
+          email,
+          password
+        })
+        .then(response => {
+            const message = response.data
+            localStorage.setItem('token', message.token)
+            localStorage.setItem('email', message.data.email)
+            localStorage.setItem('first_name', message.data.first_name)
+            localStorage.setItem('id', message.data.id)
+            localStorage.setItem('last_name', message.data.last_name)
+            console.log("message", message)
+          showLoader()
+          setTimeout(() => {
+              showDialog() 
+            }, 5000)
+          
+          
+        })
+        .catch(error => {
+          const data = error.response
+          console.log("error",data.data.message)
+          notify(data.data.message)
+  
+        })
+        
     }
 
     return toggled ? (
+        <>
+        <ToastContainer />
         <Form
         header={"Login"}
         submitButtonName={"Login"}
@@ -44,6 +80,7 @@ const Login = ({
             error={""}
         />
         </Form>
+        </>
     ): null
 }
 

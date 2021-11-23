@@ -6,6 +6,9 @@ import About from './pages/About'
 import SellerListings from "./pages/SellerListing";
 import BuyerDashboard from "./pages/BuyerDashboard";
 import SellerDashboard from "./pages/SellerDashboard";
+import SellerTemplate from "./components/SellerTemplate";
+import BuyerBookings from "./pages/BuyerBookings";
+import SellerBookings from "./pages/SellerBooking";
 import './App.css';
 
 function App() {
@@ -22,7 +25,13 @@ function App() {
     </Route>
     <Route path="/sellerdashboard" element={<SellerDashboard />}>
     </Route>
+    <Route path="/listingflow" element={<SellerTemplate />}>
+    </Route>
     <Route path="/sellerlistings" element={<SellerListings />}>
+    </Route>
+    <Route path="/buyerbookings" element={<BuyerBookings />}>
+    </Route>
+    <Route path="/sellerbookings" element={<SellerBookings />}>
     </Route>
     </Routes>
     </BrowserRouter>

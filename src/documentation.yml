@@ -1,0 +1,59 @@
+auth/register ["POST"]
+Registers a user and logs them in
+It takes in the following json format via post
+{
+  "username":"username",
+  "first_name":"first_name",
+  "last_name":"last_name",
+  "password":"passowrd",
+  "confirmation":"confirmation" [confirm password]
+}
+
+auth/login ["POST"]
+Logs a user in
+It takes in the following json format via post
+{
+  "username":"username",
+  "password":"password"
+}
+
+auth/logout ["GET"] logs out the logged in user
+
+
+api/services
+Gives list of all services offered by all users
+
+api/services/id
+Gives a service offered by a user
+hgf54
+
+api/buyer/id/service/id/book ["POST"] (requires login)
+Book a particular service
+
+
+api/user/id/services
+Gives a list of services offered by a particular user (requires login)
+Create a service by sending a post request to this endpoint with the following json format
+
+{
+  "seller":"id",  
+  "name":"name",
+  "description":"name",
+  "price":"price in decimal"
+}
+
+api/user/id/services/id
+Gives a service offered by a particular user (requires login)
+
+api/user/id/buyer/bookings
+Gives a list of services that have been booked by a buyer (requires login)
+
+api/user/id/buyer/bookings/id
+Gives a particular booking made by the user (requires login) [PUT, DELETE] methods can be carried out to cahnge the state of the booking
+
+api/user/id/seller/bookings
+Gives a list of the services offered by the user that have been booked (requires login) [PUT, DELETE] methods can be carried out to cahnge the state of the booking
+
+api/user/id/seller/bookins/id
+Gives a particular service offered by the user that has been booked(requires login) [PUT, DELETE] methods can be carried out to cahnge the state of the booking
+

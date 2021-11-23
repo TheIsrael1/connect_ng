@@ -6,8 +6,7 @@ export const listings = [
     image: placeholder,
     price: 500,
     text: "I will give you a very good haricut!",
-    author: "graham",
-    status: "waiting for payment",
+    date: "posted on 24th of July",
   },
   {
     id: 1,

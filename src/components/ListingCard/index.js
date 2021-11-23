@@ -1,51 +1,40 @@
+import { useEffect, useState } from 'react';
 import styles from './listingcard.module.css'
+import placeholder from "../../assets/image/placeholder_listing.png";
 
 export default function ListingCard(props) {
+
+  const[date, setDate] = useState("")
   const imagestyle = {
-    background: `url('${props.listing.image}')`,
+    background: `url('${placeholder}')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     height: "200px",
   };
+
+  useEffect(()=>{
+      const da = props.listing.created_at;
+      const dat= da.match(/[0-9]{4}-[0-9]{2}-[0-9]{2}/i)
+      setDate(dat)
+      console.log("date",dat)
+    
+  },[])
   return (
     <div className={`flex h-auto bg-gray-300 rounded my-3 mx-32`}>
       <div className={`w-64`} style={imagestyle}></div>
       <div className={`px-4 py-4 w-full`}>
-        <h2 className={`font-bold text-lg md:text-xl`}>{props.listing.text}</h2>
+        <h2 className={`font-bold text-lg md:text-xl`}>{props.listing.description}</h2>
         <div className={`flex items-center my-3`}>
           <p className={`bg-yellow-300 p-2 font-semibold ${styles.starting}`}>Starting @</p>
           <p className={`p-2 bg-black text-white ${styles.price}`}>
             &#8358;{props.listing.price}
           </p>
         </div>
-        {props.listing.author && (
-          <div className={`flex justify-between items-center`}>
-            <div>
-              <p className={`text-gray-500 py-2`}>{props.listing.author}</p>
-            </div>
-            <div>
-              {props.listing.status &&
-              typeof props.listing.status === "string" ? (
-                <button
-                  className={`font-semibold ${
-                    props.listing.status === "accept"
-                      ? "bg-yellow-300"
-                      : "bg-gray-500"
-                  } py-2 px-6 cursor-pointer text-white`}
-                >
-                  {props.listing.status}
-                </button>
-              ) : (
-                <p>Payment made, click here when service is completed!</p>
-              )}
-            </div>
-          </div>
-        )}
-        {props.listing.date && (
+        {props.listing.created_at && (
           <div>
             <p className={`text-right text-gray-500 py-4`}>
-              {props.listing.date}
+              posted on {date}
             </p>
           </div>
         )}

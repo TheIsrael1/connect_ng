@@ -1,0 +1,12 @@
+.starting{
+    background-color: var(--main-color);
+}
+.price{
+    color: var(--main-color);
+}
+.accept{
+    background-color: var(--main-color);
+}
+.paymentConfirm{
+    color: var(--green);
+}

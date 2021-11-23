@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './modal.module.css'
+import { Link } from 'react-router-dom'
 
 const Modal = () => {
     return (
@@ -19,12 +20,12 @@ const Modal = () => {
                 </span>
             </div>
             <div className={`${styles.optionButtons}`}>
-                <button className={`${styles.option}`}>
+                <Link to="/sellerdashboard" className={`${styles.option}`}>
                     List a Service
-                </button>
-                <button className={`${styles.option}`}>
+                </Link>
+                <Link to="/market" className={`${styles.option}`}>
                     Find a Service
-                </button>
+                </Link>
             </div>
             </div>
             
