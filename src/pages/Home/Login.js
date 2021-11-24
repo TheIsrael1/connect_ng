@@ -20,7 +20,7 @@ const Login = ({
         e.preventDefault()
 
         axios
-        .post('http://connect-ng.herokuapp.com/api/auth/login', {
+        .post('https://connect-ng.herokuapp.com/api/auth/login', {
           email,
           password
         })
