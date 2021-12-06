@@ -47,7 +47,7 @@ const Signup = ({
       })
       .catch(error => {
         const data = error.response
-        console.log("error",data.data.message)
+        console.log("error",data.message)
         notify(data.data.message)
       })
         }
