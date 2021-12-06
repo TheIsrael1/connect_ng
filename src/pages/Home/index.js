@@ -23,7 +23,7 @@ const Home = (
         <div className={`${styles.container}`}>
             <div className={`${styles.wrapper}`} >
                 <div className={`${styles.row}`}>
-                    <div className={`${styles.column}`}>
+                    <div className={`${styles.column1}`}>
                     <div className={`${styles.header}`}>
                     Say bye to Physical  Outlets!
                     </div>
@@ -34,7 +34,7 @@ const Home = (
                     GETTING STARTED
                     </a>
                     </div>
-                    <div className={`${styles.column}`}>
+                    <div className={`${styles.column2}`}>
                     <Signup
                     toggle={()=>{setToggled(!toggled)}}
                     showDialog={()=>{setShowDialog(!showDialog)}}

@@ -63,3 +63,15 @@
     margin: 0 0 10px 0;
     padding-right: 0;
 }
+
+@media screen and (max-width: 1024px) {
+    
+    .row{
+        grid-template-areas: "col1";
+    }
+
+    .column2{
+        display: none;
+        padding: 0;
+    }
+  }

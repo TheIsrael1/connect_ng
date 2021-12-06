@@ -28,9 +28,10 @@
     position: relative;
     margin: 0 auto;
     background-color: var(--gray);
-    width: 40em;
+    width: 50em;
     max-width: 32em;
     min-height: 30em;
+    margin: 0 auto;
     padding: 1em 2em;
     border-radius: 3px;
     opacity: 1;
@@ -38,18 +39,14 @@
     visibility: visible;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     backface-visibility: hidden;
-    transform: scale(1.2);
     transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     /* overflow-y: hidden; */
     -ms-overflow-style: none; 
-    scrollbar-width: none;
 }
 .modal::-webkit-scrollbar{
     display: none;
 }
-/* .imgCon{
-    
-} */
+
 .img{
     width: 35em; 
     height: 16em;  
@@ -96,9 +93,7 @@
 .category{
     text-align: left;
 }
-/* .category::placeholder{
-    color: var();
-} */
+
 .price{
     width: 9rem;
     height: 2em;
@@ -118,10 +113,7 @@
     justify-content: space-between;
     margin-top: .3em;
 }
-.btnContainer{
-    /* display: flex;
-    justify-content: end; */
-}
+
 .btn{
     width: 4em;
     border: none;
@@ -133,3 +125,13 @@
     font-weight: 700;
     padding: .5em;
 }
+
+@media screen and (max-width: 1024px) {
+    .modal{
+        max-width: 20rem;
+        margin: 0 auto;
+    }
+    .input, .textarea{
+        max-width: 16rem;
+    }
+  }

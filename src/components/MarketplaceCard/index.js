@@ -70,12 +70,12 @@ export default function MarketplaceCard(props) {
           <p className={``}>{props.marketplace.description}</p>
           <div className={`flex items-center mt-2`}>{star}</div>
           <div className={`flex`}>
-            <p className={`my-5 mr-10 font-semibold`}>
-              Starting @ <span>&#8358;{props.marketplace.price}</span>
+            <p className={`my-2 mr-10 font-semibold`}>
+              Starting@ <span>&#8358;{props.marketplace.price}</span>
             </p>
             <button
               onClick={handlePost}
-              className={`font-semibold py-2 px-6 rounded cursor-pointer my-2 ${styles.book}`}
+              className={`font-semibold py-2 px-6 w-24 h-12 rounded cursor-pointer my-2 ${styles.book}`}
             >
               Book
             </button>

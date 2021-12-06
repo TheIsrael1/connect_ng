@@ -1,8 +1,13 @@
 .container{
     background:#000;
     margin:0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
   .centered{
     width:400px;

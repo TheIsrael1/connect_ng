@@ -28,10 +28,10 @@ const Searchbox = (props) => {
   
 
   return (
-    <div className={`h-16 flex justify-center mx-auto my-10 w-1/2 bg-gray-300`}>
+    <div className={`h-16 flex justify-center mx-auto my-10 w-full md:w-3/4 lg:w-4/6 bg-gray-300`}>
       <select
         onChange={props.categorySelect}
-        className={`text-md w-30 text-center outline-none cursor-pointer ${styles.select}`}
+        className={`text-md w-16  md:w-24 lg:w-30 text-center outline-none cursor-pointer ${styles.select}`}
       >
         <option>All</option>
         {categories.map(catg=>{return(

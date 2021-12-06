@@ -52,3 +52,29 @@
     font-size: 1em;
     font-weight: 700;
 }
+
+@media only screen and (max-width: 1024px) {
+    .row{
+        grid-template-areas: "col2";
+    }
+    .column1{
+        display: none;
+    }
+    .column2{
+    width: 30rem;
+    margin: auto;
+    }
+  }
+
+  @media only screen and (max-width: 468px) {
+    .row{
+        grid-template-areas: "col2";
+    }
+    .column1{
+        display: none;
+    }
+    .column2{
+    width: 24rem;
+    margin: auto;
+    }
+  }
