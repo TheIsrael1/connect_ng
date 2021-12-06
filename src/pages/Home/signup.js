@@ -32,9 +32,11 @@ const Signup = ({
       })
       .then(response => {
         const message = response.data
-        localStorage.setItem('token', message.token)
-            localStorage.setItem('email', message.email)
-            localStorage.setItem('data', message.data)
+            localStorage.setItem('token', message.token)
+            localStorage.setItem('email', message.data.email)
+            localStorage.setItem('first_name', message.data.first_name)
+            localStorage.setItem('id', message.data.id)
+            localStorage.setItem('last_name', message.data.last_name)
         console.log("message", message)
         showLoader()
         setTimeout(() => {
