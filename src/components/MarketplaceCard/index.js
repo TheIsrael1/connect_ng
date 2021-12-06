@@ -17,7 +17,7 @@ export default function MarketplaceCard(props) {
         .then(response => {
             const message = response.data
             console.log("message", message)
-            props.successNotify(`you booked ${message.buyer} service`)
+            props.successNotify(`"${message.service}" booked`)
           
           
         })
