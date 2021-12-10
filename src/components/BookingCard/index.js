@@ -29,6 +29,7 @@ const BookingCard = (props) => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         height: "200px",
+        
     };
   return (
     <div className={`flex h-auto bg-gray-300 rounded my-3 lg mx-2 lg:mx-40`}>

@@ -41,7 +41,7 @@ const Login = ({
         })
         .catch(error => {
           const data = error.response
-          console.log("error",data.data.message)
+          console.log("error",data)
           notify(data.data.message)
   
         })
