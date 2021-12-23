@@ -11,7 +11,8 @@ const Signup = ({
     toggled,
     toggle,
     showDialog,
-    showLoader
+    showLoader,
+    hideLoader
 }) => {
     const [password, setPassword] = useState("")    
     const [first_name, setFname] = useState("")
@@ -21,7 +22,8 @@ const Signup = ({
 
     
         const handleSubmit = e =>{
-            e.preventDefault()
+         e.preventDefault()
+         showLoader()
 
         axios
       .post('https://connect-ng.herokuapp.com/api/auth/register', {
@@ -49,6 +51,7 @@ const Signup = ({
         const data = error.response
         console.log("error",data.message)
         notify(data.data.message)
+        hideLoader()
       })
         }
 

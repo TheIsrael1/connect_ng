@@ -15,6 +15,8 @@ const Home = (
    const [showDialog, setShowDialog] = useState(false)
    const [showLoader, setShowLoader] = useState(false)
 
+   console.log(showLoader)
+
     return (
         <>
         {showLoader && <Loader />}
@@ -39,12 +41,14 @@ const Home = (
                     toggle={()=>{setToggled(!toggled)}}
                     showDialog={()=>{setShowDialog(!showDialog)}}
                     showLoader={()=>{setShowLoader(!showLoader)}}
+                    hideLoader={()=>{setShowLoader(showLoader)}}
                     toggled={toggled}
                     />
                     <Login
                     toggle={()=>{setToggled(!toggled)}}
                     showDialog={()=>{setShowDialog(!showDialog)}}
                     showLoader={()=>{setShowLoader(!showLoader)}}
+                    hideLoader={()=>{setShowLoader(showLoader)}}
                     toggled={toggled}
                     />
                     </div>

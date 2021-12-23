@@ -10,7 +10,8 @@ const Login = ({
     toggled,
     toggle,
     showDialog,
-    showLoader
+    showLoader,
+    hideLoader
 }) => {
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
@@ -18,7 +19,7 @@ const Login = ({
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-
+        showLoader()
         axios
         .post('https://connect-ng.herokuapp.com/api/auth/login', {
           email,
@@ -32,22 +33,24 @@ const Login = ({
             localStorage.setItem('id', message.data.id)
             localStorage.setItem('last_name', message.data.last_name)
             console.log("message", message)
-          showLoader()
-          setTimeout(() => {
-              showDialog() 
-            }, 5000)
-          
-          
+            setTimeout(() => {
+              showDialog()
+            }, 3000)
+        
         })
         .catch(error => {
           const data = error.response
           console.log("error",data)
-          notify(data.data.message)
-  
-        })
+          notify(data.data.message) 
+          hideLoader()
+ 
+          
+        }) 
+
         
     }
 
+    
     return toggled ? (
         <>
         <ToastContainer />
